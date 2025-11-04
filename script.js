@@ -1,10 +1,10 @@
-
 const PAIRS = 6;
 const FLIP_BACK_DELAY = 1000;
 const WIN_MSG = (t) => `Браво! Ги најде сите парови за ${t} обиди.`;
 
-const imageSet = ["1.png","2.png","3.png","4.png","5.png","6.png"];
-const backImage = "back.png";
+const IMG_PATH = "oweb_domasna3/";
+const imageSet = ["1.png","2.png","3.png","4.png","5.png","6.png"].map(f => IMG_PATH + f);
+const backImage = IMG_PATH + "back.png";
 
 let deck = [];
 let firstCard = null;
@@ -56,4 +56,77 @@ function createCard(value, index) {
   backImg.alt = "грб";
   back.appendChild(backImg);
 
-  const front = document.createEl
+  const front = document.createElement("div");
+  front.className = "card-face card-front";
+  const frontImg = document.createElement("img");
+  frontImg.src = value;
+  frontImg.alt = "лице";
+  front.appendChild(frontImg);
+
+  inner.appendChild(back);
+  inner.appendChild(front);
+  card.appendChild(inner);
+  card.addEventListener("click", onCardClick);
+  return card;
+}
+
+function onCardClick(e) {
+  const card = e.currentTarget;
+  if (lockBoard) return;
+  if (card.classList.contains("flipped") || card.classList.contains("matched")) return;
+
+  card.classList.add("flipped");
+
+  if (!firstCard) {
+    firstCard = card;
+    return;
+  }
+
+  secondCard = card;
+  tries++;
+  triesEl.textContent = tries;
+  lockBoard = true;
+
+  if (isMatch(firstCard, secondCard)) {
+    handleMatch();
+  } else {
+    setTimeout(unflipPair, FLIP_BACK_DELAY);
+  }
+}
+
+function isMatch(a, b) {
+  return a.dataset.value === b.dataset.value;
+}
+
+function handleMatch() {
+  firstCard.classList.add("matched");
+  secondCard.classList.add("matched");
+  firstCard.removeEventListener("click", onCardClick);
+  secondCard.removeEventListener("click", onCardClick);
+  matchedPairs++;
+  resetPick();
+
+  if (matchedPairs === PAIRS) {
+    setTimeout(() => alert(WIN_MSG(tries)), 300);
+  }
+}
+
+function unflipPair() {
+  if (firstCard) firstCard.classList.remove("flipped");
+  if (secondCard) secondCard.classList.remove("flipped");
+  resetPick();
+}
+
+function resetPick() {
+  firstCard = null;
+  secondCard = null;
+  lockBoard = false;
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i++) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
