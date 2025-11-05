@@ -1,25 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="mk">
   <head>
     <meta charset="UTF-8" />
-    <title>Меморија – најди го парот</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css?v=2" >
-    <script src="script.js?v=2" defer></script>
+    <title>Меморија – најди го парот</title>
+
+    <!-- lidhja me CSS -->
+    <link rel="stylesheet" href="style.css?v=2" />
   </head>
+
   <body>
     <header class="header">
       <h1>Меморија – најди го парот</h1>
       <div class="toolbar">
-        <p>Обиди: <span id="tries" aria-live="polite">0</span></p>
+        <p>Обиди: <span id="tries">0</span></p>
         <button id="restart" type="button">Почни повторно</button>
       </div>
     </header>
+
     <main>
       <div id="game-board" class="board" role="grid" aria-label="табла со карти"></div>
     </main>
-    <script src="script.js?v=2" defer></script>
 
+    <!-- Skripti duhet të jetë këtu, poshtë -->
+    <script src="script.js?v=3"></script>
   </body>
 </html>
