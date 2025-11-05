@@ -1,74 +1,79 @@
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #f5e09b;
+  font-family: "Segoe UI", Verdana, sans-serif;
+  background: linear-gradient(to bottom, #e9f2ff, #c8e3ff);
   margin: 0;
 }
 
 h1 {
-  color: #80A1BA;
   text-align: center;
-  font-size: 3em;
-  text-decoration: overline;
-  text-shadow: -6px 4px 3px rgb(193, 192, 192);
+  color: #004c97;
+  font-size: 2.6em;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  margin-top: 30px;
 }
 
 p {
-  color: #1b5481;
+  color: #00395f;
   text-align: center;
   font-size: 1.1em;
+  line-height: 1.5;
 }
 
 img {
   display: block;
-  margin: 20px auto;
-  border-radius: 1em;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-  transition: transform 3s;
+  margin: 25px auto;
+  border-radius: 50%;
+  width: 180px;
+  box-shadow: 0 8px 25px rgba(0, 76, 151, 0.2);
+  transition: transform 1.2s ease;
 }
 img:hover {
-  transform: rotate(360deg);
+  transform: scale(1.08);
 }
 
 form {
-  background-color: #B4DEBD;
-  border-radius: 1em;
+  background-color: #ffffff;
+  border-radius: 15px;
   max-width: 750px;
-  margin: 20px auto;
-  padding: 20px;
-  font-size: 1.1em;
+  margin: 20px auto 40px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 30px rgba(0, 76, 151, 0.1);
+  font-size: 1.05em;
 }
 
 input[type="radio"] {
-  accent-color: #1b5481;
+  accent-color: #004c97;
   margin-right: 6px;
 }
 
 input[type="submit"] {
-  font-size: 1.3em;
+  display: block;
+  margin: 20px auto 10px;
+  font-size: 1.1em;
   font-weight: bold;
-  color: #1b5481;
-  background-color: #fff;
-  border: 3px solid #1b5481;
-  border-radius: 10px;
+  background: #004c97;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
   padding: 10px 20px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 input[type="submit"]:hover {
-  background-color: #1b5481;
-  color: #fff;
+  background: #0073e6;
+  box-shadow: 0 6px 15px rgba(0,115,230,0.4);
 }
 
 a {
   text-decoration: none;
-  font-size: 1.1em;
-  color: #1b5481;
+  color: #004c97;
   font-weight: bold;
   display: block;
   text-align: center;
-  margin: 15px 0;
+  margin-bottom: 25px;
+  transition: 0.3s ease;
 }
 a:hover {
+  color: #0073e6;
   text-decoration: underline;
-  color: #91C4C3;
 }
