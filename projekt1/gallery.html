@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8">
+  <title>City Explorer – Галерија (Виена)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Povrzuva stilovi -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header + Navigacija -->
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">City Explorer – Виена</h1>
+    <nav class="nav">
+      <a href="index.html">Почетна</a>
+      <a class="active" href="gallery.html">Галерија</a>
+      <a href="blog.html">Блог</a>
+      <a href="survey.html">Анкета</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Sadržina na galerijata -->
+<main class="container">
+  <h2>Галерија – Главни атракции</h2>
+  <p>Гласовите (👍/👎) се зачувуваат локално во твојот прелистувач.</p>
+
+  <!-- Mreza od karti so fotografii -->
+  <div class="grid">
+    <article class="card" data-id="p1">
+      <img src="img/p1.jpg" alt="Штефансдом">
+      <h3>Штефансдом (Катедрала)</h3>
+      <div class="votes">
+        <button class="btn-like">👍 <span class="like-count">0</span></button>
+        <button class="btn-dislike">👎 <span class="dislike-count">0</span></button>
+      </div>
+    </article>
+
+    <article class="card" data-id="p2">
+      <img src="img/p2.jpg" alt="Шенбрун">
+      <h3>Шенбрун</h3>
+      <div class="votes">
+        <button class="btn-like">👍 <span class="like-count">0</span></button>
+        <button class="btn-dislike">👎 <span class="dislike-count">0</span></button>
+      </div>
+    </article>
+
+    <article class="card" data-id="p3">
+      <img src="img/p3.jpg" alt="Белведере">
+      <h3>Белведере</h3>
+      <div class="votes">
+        <button class="btn-like">👍 <span class="like-count">0</span></button>
+        <button class="btn-dislike">👎 <span class="dislike-count">0</span></button>
+      </div>
+    </article>
+
+    <article class="card" data-id="p4">
+      <img src="img/p4.jpg" alt="Пратер и Ризенрад">
+      <h3>Пратер и Ризенрад</h3>
+      <div class="votes">
+        <button class="btn-like">👍 <span class="like-count">0</span></button>
+        <button class="btn-dislike">👎 <span class="dislike-count">0</span></button>
+      </div>
+    </article>
+
+    <article class="card" data-id="p5">
+      <img src="img/p5.jpg" alt="Музеумски Кварт">
+      <h3>Музеумски Кварт (MQ)</h3>
+      <div class="votes">
+        <button class="btn-like">👍 <span class="like-count">0</span></button>
+        <button class="btn-dislike">👎 <span class="dislike-count">0</span></button>
+      </div>
+    </article>
+
+    <article class="card" data-id="p6">
+      <img src="img/p6.jpg" alt="Донауканал">
+      <h3>Донауканал / Дунав</h3>
+      <div class="votes">
+        <button class="btn-like">👍 <span class="like-count">0</span></button>
+        <button class="btn-dislike">👎 <span class="dislike-count">0</span></button>
+      </div>
+    </article>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 City Explorer – Виена</p>
+  </div>
+</footer>
+
+<!-- Povrzuva JS -->
+<script src="app.js"></script>
+</body>
+</html>
