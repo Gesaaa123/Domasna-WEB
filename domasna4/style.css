@@ -1,0 +1,41 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+td, th {
+    border: 1px solid slategrey;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(204, 230, 246);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(244, 202, 185);
+}
+
+th {
+    background-color: white;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline salmon;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightblue;
+    padding: 6px;
+}
+
+input {
+    width: 25%;
+    padding: 8px;
+    margin-right: 6px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
