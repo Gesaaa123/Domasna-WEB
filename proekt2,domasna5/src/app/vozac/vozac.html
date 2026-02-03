@@ -1,0 +1,28 @@
+<div class="card">
+  <img
+    class="pic"
+    [src]="motordzija?.iconUrl"
+    alt="MotoGP driver image"
+  >
+
+  <div class="info">
+    <p class="name">
+      <span class="index">#{{ indeks }}</span>
+      {{ motordzija?.name }}
+    </p>
+
+    <p>
+      <span class="label">Team:</span>
+      <span class="value">{{ motordzija?.team }}</span>
+    </p>
+
+    <p>
+      <span class="label">Points:</span>
+      <span class="value">{{ motordzija?.points }}</span>
+    </p>
+
+    <button class="button" (click)="funk()">
+      View profile
+    </button>
+  </div>
+</div>
