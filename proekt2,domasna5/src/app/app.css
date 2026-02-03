@@ -1,0 +1,73 @@
+/* ===== HEADER ===== */
+.pocetok {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 25px 30px;
+  background: linear-gradient(135deg, #1c1c1c, #8b0000);
+}
+
+.logo {
+  width: 240px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.6));
+}
+
+.quote {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #f5f5f5;
+  max-width: 500px;
+  line-height: 1.3;
+  text-align: center;
+  transition: letter-spacing 0.3s ease;
+}
+
+.quote:hover {
+  letter-spacing: 1px;
+}
+
+/* ===== LISTA / CONTENT ===== */
+.position {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 60px 40px;
+  background-color: #f1f1f1;
+}
+
+/* odd / even stil vizual */
+.is-odd {
+  border-left: 6px solid #8b0000;
+}
+
+.is-even {
+  border-left: 6px solid #1c1c1c;
+}
+
+/* ===== VOZAC CARD WRAPPER ===== */
+app-vozac {
+  background: #ffffff;
+  border-radius: 1.6em;
+  padding: 18px 16px 20px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+app-vozac:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== FOOTER ===== */
+.kraj {
+  background-color: #1c1c1c;
+  color: #dddddd;
+  text-align: center;
+  padding: 22px 10px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 0.85em;
+  letter-spacing: 1px;
+}
