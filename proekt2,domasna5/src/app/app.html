@@ -1,0 +1,25 @@
+<div class="pocetok">
+  <img
+    class="logo"
+    src="https://th.bing.com/th/id/OIP.vcakitCPJ9cmJI3We74ZSQHaE4?w=257&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+    alt="MotoGP logo"
+  >
+  <span class="quote">
+    Great champions are built by belief, discipline, and passion.
+  </span>
+</div>
+
+<div class="position">
+  <app-vozac
+    *ngFor="let moto of Shoferi; index as i; odd as nepar; even as par"
+    [motordzija]="moto"
+    [indeks]="i + 1"
+    (click)="soul()"
+    [class.is-odd]="nepar"
+    [class.is-even]="par">
+  </app-vozac>
+</div>
+
+<div class="kraj">
+  <span>© MotoGP application – All rights reserved.</span>
+</div>
